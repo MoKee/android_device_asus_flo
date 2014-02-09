@@ -19,7 +19,7 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(CM_BUILD),)
+ifeq ($(MK_BUILD),)
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/asus/flo-kernel/kernel
 else
