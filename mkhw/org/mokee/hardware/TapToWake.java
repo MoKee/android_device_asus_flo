@@ -21,18 +21,16 @@ import org.mokee.hardware.util.FileUtils;
 public class TapToWake {
 
     private static String CONTROL_PATH = "/sys/android_touch/doubletap2wake";
-    private static boolean mEnabled = true;
 
     public static boolean isSupported() {
         return true;
     }
 
     public static boolean isEnabled() {
-        return false;
+        return FileUtils.readOneLine(CONTROL_PATH).equals("1");
     }
 
     public static boolean setEnabled(boolean state) {
-        mEnabled = state;
         return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
     }
 }
