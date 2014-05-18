@@ -17,6 +17,7 @@
 package org.mokee.hardware;
 
 import org.mokee.hardware.util.FileUtils;
+import java.io.*;
 
 public class TapToWake {
 
@@ -31,7 +32,17 @@ public class TapToWake {
     }
 
     public static boolean setEnabled(boolean state) {
-        return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
+        String value = state ? "1" : "0";
+        try {
+            Process p = Runtime.getRuntime().exec("sh");
+            DataOutputStream os = new DataOutputStream(p.getOutputStream());
+            os.writeBytes("echo " + value + " > " + CONTROL_PATH + "\n");
+            os.writeBytes("exit\n");
+            os.flush();
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
     }
 }
 
