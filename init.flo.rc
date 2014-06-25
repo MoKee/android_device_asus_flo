@@ -235,6 +235,10 @@ on post-fs-data
     # Doubletap2wake
     chown system system /sys/android_touch/doubletap2wake
 
+    # Sweep2wake
+    chown system system /sys/android_touch/sweep2wake
+    chown system system /sys/android_touch/s2w_s2sonly
+
     # Enable Power modes and set the CPU Freq Sampling rates
     write /sys/module/rpm_resources/enable_low_power/L2_cache 1
     write /sys/module/rpm_resources/enable_low_power/pxo 1
