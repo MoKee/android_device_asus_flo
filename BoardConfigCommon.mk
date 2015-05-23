@@ -152,4 +152,7 @@ USE_MINIKIN := true
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Hardware abstraction layer
+BOARD_HARDWARE_CLASS := device/asus/flo/mkhw
+
 -include vendor/asus/flo/BoardConfigVendor.mk
