@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Use SaberMod Toolchains
+SABERMOD_TOOLCHAIN_ENABLED := true
+
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
