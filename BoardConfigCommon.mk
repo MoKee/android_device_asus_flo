@@ -121,8 +121,8 @@ BOARD_SEPOLICY_DIRS += device/asus/flo/sepolicy
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/cyanogen
+# MK Hardware
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS += hardware/mokee
 
 -include vendor/asus/flo/BoardConfigVendor.mk
