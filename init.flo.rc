@@ -193,6 +193,10 @@ on post-fs-data
 
     rm /data/local/tmp/adreno_config.txt
 
+    # Double tap to wake
+    chown system system /sys/android_touch/doubletap2wake
+    chmod 0664 /sys/android_touch/doubletap2wake
+
     # White LED
     chown system system /sys/class/leds/white/device/lock
     chown system system /sys/class/leds/white/brightness
