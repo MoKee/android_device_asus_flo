@@ -197,6 +197,7 @@ static void power_hint(__attribute__((unused)) struct power_module *module,
     int len;
 
     switch (hint) {
+    case POWER_HINT_INTERACTION:
     case POWER_HINT_LAUNCH_BOOST:
     case POWER_HINT_CPU_BOOST:
         if (!is_profile_valid(current_power_profile)) {
