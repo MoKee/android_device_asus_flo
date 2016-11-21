@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
+# Inherit some common MK stuff.
+$(call inherit-product, vendor/mk/config/common_mini_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flo
-PRODUCT_NAME := cm_flo
+PRODUCT_NAME := mk_flo
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus

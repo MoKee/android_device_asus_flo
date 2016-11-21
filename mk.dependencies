@@ -1,5 +1,9 @@
 [
  {
+   "repository": "android_vendor_asus_flo",
+   "target_path": "vendor/asus/flo"
+ },
+ {
    "repository": "android_external_stlport",
    "target_path": "external/stlport"
  },
